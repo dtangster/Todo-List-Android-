@@ -50,7 +50,8 @@ public class EditDialogFragment extends DialogFragment {
             public void onClick(View v) {
                 int position = getArguments().getInt("position");
                 String newText = editText.getText().toString();
-                ((MainActivity) getActivity()).setItem(position, newText);
+                MainActivity parent = (MainActivity) getActivity();
+                parent.setItem(position, newText);
                 dismiss();
             }
         });
