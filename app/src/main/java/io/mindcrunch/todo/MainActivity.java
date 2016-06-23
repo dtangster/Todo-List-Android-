@@ -65,6 +65,7 @@ public class MainActivity extends AppCompatActivity {
     public void setItem(int position, String text) {
         items.set(position, text);
         itemsAdapter.notifyDataSetChanged();
+        writeItems();
     }
 
     private void readItems() {
